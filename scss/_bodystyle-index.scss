@@ -1,0 +1,91 @@
+h1 {
+  font-family: $font-family;
+  font-size: $h1-size;
+  letter-spacing: $h1-letter-spacing;
+}
+h2 {
+  font-family: $font-family;
+  font-size: $h2-size;
+  letter-spacing: $h2-letter-spacing;
+  word-wrap: break-word;
+}
+
+.index_container {
+  border-style: solid;
+  border-color: gold;
+  border-width: 5px;
+  color: white;
+  display: grid;
+  height: 101vh;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto; /*el espacio libre entre width y max-width lo distribuye en igual proporción a ambos lados*/
+  grid-template-columns: repeat (3, 1fr);
+  grid-template-rows: 65% 35%;
+  column-gap: 0rem;
+  /*row-gap: 20px;*/
+  grid-template-areas:
+    "logo      logo      logo"
+    "quienSoy  trabajos  contacto";
+}
+
+.index_logo {
+  grid-area: logo;
+
+  background-image: url("../images/index_logo.jpg");
+  background-position-y: center;
+  background-position-x: right;
+  background-size: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.index_quienSoy {
+  grid-area: quienSoy;
+  background-image: url("../images/pexels-george-milton-6953868.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.index_trabajos {
+  grid-area: trabajos;
+  background-image: url("../images/index_trabajos.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.index_contacto {
+  grid-area: contacto;
+  background-image: url("../images/index_contacto.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.index_row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.index_icons {
+  flex-direction: row;
+  .icons_mic,
+  .icons_head,
+  .icons_radio {
+    max-width: 50px;
+    padding: 10px;
+  }
+}

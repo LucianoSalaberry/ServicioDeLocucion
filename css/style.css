@@ -1,0 +1,288 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Cinzel";
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+
+h2 {
+  font-family: "Cinzel";
+  font-size: 30px;
+  letter-spacing: 5px;
+  word-wrap: break-word;
+}
+
+.index_container {
+  border-style: solid;
+  border-color: gold;
+  border-width: 5px;
+  color: white;
+  display: grid;
+  height: 101vh;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto; /*el espacio libre entre width y max-width lo distribuye en igual proporción a ambos lados*/
+  grid-template-columns: repeat 3, 1fr;
+  grid-template-rows: 65% 35%;
+  column-gap: 0rem;
+  /*row-gap: 20px;*/
+  grid-template-areas: "logo      logo      logo" "quienSoy  trabajos  contacto";
+}
+
+.index_logo {
+  grid-area: logo;
+  background-image: url("../images/index_logo.jpg");
+  background-position-y: center;
+  background-position-x: right;
+  background-size: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.index_quienSoy {
+  grid-area: quienSoy;
+  background-image: url("../images/pexels-george-milton-6953868.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.index_trabajos {
+  grid-area: trabajos;
+  background-image: url("../images/index_trabajos.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.index_contacto {
+  grid-area: contacto;
+  background-image: url("../images/index_contacto.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.index_row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index_icons {
+  flex-direction: row;
+}
+.index_icons .icons_mic,
+.index_icons .icons_head,
+.index_icons .icons_radio {
+  max-width: 50px;
+  padding: 10px;
+}
+
+/*HOVER en el INDEX*/
+.index_quienSoy {
+  transition: transform 0.3s;
+}
+
+.index_quienSoy:hover {
+  transform: scale(1.3);
+}
+
+.index_trabajos {
+  transition: transform 0.3s;
+}
+
+.index_trabajos:hover {
+  transform: scale(1.3);
+}
+
+.index_contacto {
+  transition: transform 0.3s;
+}
+
+.index_contacto:hover {
+  transform: scale(1.3);
+}
+
+.slider {
+  background: transparent;
+  background-image: linear-gradient(to right, transparent, transparent, white, transparent, transparent);
+  height: 8 70px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 1140px;
+  margin: 0;
+}
+
+/*before es la izquierda de la pantalla - el gradiente se mueve a la izq empezando en blanco
+.slider::before {
+  background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 500px;
+  z-index: -1;
+}
+*/
+/*
+.slider::after {
+  background: linear-gradient(to right, #fff 100%, rgba(255, 255, 255, 0) 0%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 500px;
+  z-index: -1;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  /*-webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}*/
+.slider .slide-track {
+  animation: scroll 60s linear infinite;
+  display: flex;
+  width: 4500px;
+}
+
+.slider .slide-track:hover {
+  animation-play-state: running;
+}
+
+.slider .slide {
+  height: 70px;
+  width: 250px;
+}
+
+.slide:nth-child(1) {
+  background-color: transparent;
+}
+
+.slide:nth-child(2) {
+  background-color: transparent;
+}
+
+.slide:nth-child(3) {
+  background-color: transparent;
+}
+
+.slide:nth-child(4) {
+  background-color: transparent;
+}
+
+.slide:nth-child(5) {
+  background-color: transparent;
+}
+
+.slide:nth-child(6) {
+  background-color: transparent;
+}
+
+.slide:nth-child(7) {
+  background-color: transparent;
+}
+
+.slide:nth-child(8) {
+  background-color: transparent;
+}
+
+.slide:nth-child(9) {
+  background-color: transparent;
+}
+
+.slide:nth-child(10) {
+  background-color: transparent;
+}
+
+.slide:nth-child(11) {
+  background-color: transparent;
+}
+
+.slide:nth-child(12) {
+  background-color: transparent;
+}
+
+.slide:nth-child(13) {
+  background-color: transparent;
+}
+
+.slide:nth-child(14) {
+  background-color: transparent;
+}
+
+.slide:nth-child(15) {
+  background-color: transparent;
+}
+
+.slide:nth-child(16) {
+  background-color: transparent;
+}
+
+.slide:nth-child(17) {
+  background-color: transparent;
+}
+
+.slide:nth-child(18) {
+  background-color: transparent;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2250px);
+  }
+}
+.iberia {
+  height: 250px;
+  position: relative;
+  top: -88px;
+}
+
+.bayer {
+  height: 90px;
+  position: relative;
+  top: -10px;
+}
+
+.accenture {
+  height: 230px;
+  position: relative;
+  top: -80px;
+}
+
+.avon {
+  height: 150px;
+  position: relative;
+  top: -38px;
+  opacity: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
