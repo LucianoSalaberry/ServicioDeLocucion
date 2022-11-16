@@ -16,7 +16,7 @@ h2 {
   border-width: 5px;
   color: white;
   display: grid;
-  height: 101vh;
+  height: 100.5vh;
   width: 100%;
   max-width: 1366px;
   margin: 0 auto; /*el espacio libre entre width y max-width lo distribuye en igual proporción a ambos lados*/
@@ -52,6 +52,11 @@ h2 {
   align-items: center;
   text-decoration: none;
   color: white;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .index_trabajos {
@@ -63,6 +68,11 @@ h2 {
   align-items: center;
   text-decoration: none;
   color: white;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .index_contacto {
@@ -74,6 +84,11 @@ h2 {
   align-items: center;
   text-decoration: none;
   color: white;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 .index_row {
   display: flex;

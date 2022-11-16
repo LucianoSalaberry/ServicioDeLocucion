@@ -1,0 +1,71 @@
+.contacto_container {
+  /* height: 100vh;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;*/
+}
+
+.main {
+  display: grid;
+  height: 98vh;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: 60% 40%;
+  column-gap: 0rem;
+  row-gap: 0rem;
+  grid-template-areas:
+    "form     foto_locutora"
+    "foto_notebook     instagram";
+}
+
+.form {
+  grid-area: form;
+}
+.foto_locutora {
+  grid-area: foto_locutora;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.foto_notebook {
+  grid-area: foto_notebook;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.instagram {
+  grid-area: instagram;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icon_whatsapp {
+  width: 400px;
+  height: auto;
+}
+.icon_fiverr {
+  width: 160px;
+  height: auto;
+}
+.icon_insta {
+  display: block;
+  position: relative;
+
+  .icon_instabrad {
+    width: 400px;
+    height: auto;
+  }
+
+  .icons_mic_contact {
+    width: 60px;
+    height: auto;
+    background-color: transparent;
+    position: absolute;
+    bottom: 100px;
+    left: 169px;
+  }
+}

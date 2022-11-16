@@ -25,7 +25,7 @@ h2 {
   border-width: 5px;
   color: white;
   display: grid;
-  height: 101vh;
+  height: 100.5vh;
   width: 100%;
   max-width: 1366px;
   margin: 0 auto; /*el espacio libre entre width y max-width lo distribuye en igual proporción a ambos lados*/
@@ -59,6 +59,10 @@ h2 {
   align-items: center;
   text-decoration: none;
   color: white;
+  transition: transform 0.3s;
+}
+.index_quienSoy:hover {
+  transform: scale(1.1);
 }
 
 .index_trabajos {
@@ -70,6 +74,10 @@ h2 {
   align-items: center;
   text-decoration: none;
   color: white;
+  transition: transform 0.3s;
+}
+.index_trabajos:hover {
+  transform: scale(1.1);
 }
 
 .index_contacto {
@@ -81,6 +89,10 @@ h2 {
   align-items: center;
   text-decoration: none;
   color: white;
+  transition: transform 0.3s;
+}
+.index_contacto:hover {
+  transform: scale(1.1);
 }
 
 .index_row {
@@ -99,29 +111,77 @@ h2 {
   padding: 10px;
 }
 
-/*HOVER en el INDEX*/
-.index_quienSoy {
-  transition: transform 0.3s;
+.contacto_container {
+  /* height: 100vh;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;*/
 }
 
-.index_quienSoy:hover {
-  transform: scale(1.3);
+.main {
+  display: grid;
+  height: 98vh;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: 60% 40%;
+  column-gap: 0rem;
+  row-gap: 0rem;
+  grid-template-areas: "form     foto_locutora" "foto_notebook     instagram";
 }
 
-.index_trabajos {
-  transition: transform 0.3s;
+.form {
+  grid-area: form;
 }
 
-.index_trabajos:hover {
-  transform: scale(1.3);
+.foto_locutora {
+  grid-area: foto_locutora;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.index_contacto {
-  transition: transform 0.3s;
+.foto_notebook {
+  grid-area: foto_notebook;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.index_contacto:hover {
-  transform: scale(1.3);
+.instagram {
+  grid-area: instagram;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.icon_whatsapp {
+  width: 400px;
+  height: auto;
+}
+
+.icon_fiverr {
+  width: 160px;
+  height: auto;
+}
+
+.icon_insta {
+  display: block;
+  position: relative;
+}
+.icon_insta .icon_instabrad {
+  width: 400px;
+  height: auto;
+}
+.icon_insta .icons_mic_contact {
+  width: 60px;
+  height: auto;
+  background-color: transparent;
+  position: absolute;
+  bottom: 100px;
+  left: 169px;
 }
 
 .slider {
@@ -283,6 +343,41 @@ h2 {
   position: relative;
   top: -38px;
   opacity: 100%;
+}
+
+.header {
+  font-family: "Cinzel";
+  font-weight: bolder;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.contact_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.contact_row .logo {
+  font-size: 40px;
+}
+
+.navBar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 4rem;
+}
+.navBar ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.navBar ul :hover {
+  transform: scale(1.3);
 }
 
 /*# sourceMappingURL=style.css.map */

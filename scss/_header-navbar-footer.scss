@@ -1,1 +1,40 @@
+.header {
+  font-family: $font-family;
+  font-weight: bolder;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.contact_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 
+  .logo {
+    font-size: $h1-size-navBar;
+  }
+}
+.navBar {
+  & ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    gap: 4rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: $h2-size-navBar;
+    }
+    & :hover {
+      transform: scale(1.3);
+    }
+
+    & li {
+    }
+  }
+}
