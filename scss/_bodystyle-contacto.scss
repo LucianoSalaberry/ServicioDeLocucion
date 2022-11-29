@@ -5,7 +5,7 @@
   margin: 0 auto;*/
 }
 
-.main {
+.main_contacto {
   display: grid;
   height: 98vh;
   width: 100%;
@@ -16,7 +16,7 @@
   column-gap: 0rem;
   row-gap: 0rem;
   grid-template-areas:
-    "form     foto_locutora"
+    "form              foto_locutora"
     "foto_notebook     instagram";
 }
 

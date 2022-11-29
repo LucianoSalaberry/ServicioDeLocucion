@@ -16,7 +16,7 @@ h2 {
   border-width: 5px;
   color: white;
   display: grid;
-  height: 100.5vh;
+  height: 102vh;
   width: 100%;
   max-width: 1366px;
   margin: 0 auto; /*el espacio libre entre width y max-width lo distribuye en igual proporción a ambos lados*/
@@ -45,8 +45,9 @@ h2 {
 }
 .index_quienSoy {
   grid-area: quienSoy;
-  background-image: url("../images/pexels-george-milton-6953868.jpg");
+  background-image: url("../images/index_quiensoy2.jpg");
   background-size: cover;
+  background-position: 50% 40%;
   display: flex;
   justify-content: center;
   align-items: center;
