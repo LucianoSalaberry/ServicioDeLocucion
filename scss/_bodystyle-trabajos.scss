@@ -1,46 +1,65 @@
-.trabajos_header {
-  background-color: red;
-  opacity: 0.5;
-  width: 100%;
-  height: 100px;
-  max-width: 1366px;
-  margin: 0 auto;
-}
-
 .main_trabajos {
   display: grid;
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 0.7rem;
+  grid-template-rows: max-content auto auto max-content;
+  min-height: 100vh;
+  grid-gap: 0;
+
   grid-template-areas:
+    "header      header    header"
     "trabajo1      trabajo2    trabajo3"
-    "trabajo4      trabajo5    trabajo6";
+    "trabajo4      trabajo5    trabajo6"
+    "footer        footer       footer";
+}
+
+.header {
+  grid-area: header;
+  margin-bottom: 5px;
+}
+.trabajo1,
+.trabajo2,
+.trabajo3,
+.trabajo4,
+.trabajo5,
+.trabajo6 {
+  background-size: cover;
+  background-position: 50% 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  margin: 10px;
 }
 .trabajo1 {
   grid-area: trabajo1;
   background-image: url("../images/index_trabajos.jpg");
-  background-size: 50vh;
 }
 .trabajo2 {
   grid-area: trabajo2;
-  background-color: blue;
+  background-image: url("../images/index_trabajos.jpg");
 }
 .trabajo3 {
   grid-area: trabajo3;
-  background-color: green;
+  background-image: url("../images/index_trabajos.jpg");
 }
 .trabajo4 {
   grid-area: trabajo4;
-  background-color: red;
+  background-image: url("../images/index_trabajos.jpg");
 }
 .trabajo5 {
   grid-area: trabajo5;
-  background-color: blue;
+  background-image: url("../images/index_trabajos.jpg");
 }
 .trabajo6 {
   grid-area: trabajo6;
-  background-color: green;
+  background-image: url("../images/index_trabajos.jpg");
+}
+.footer {
+  grid-area: footer;
+  margin-top: 5px;
 }
