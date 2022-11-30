@@ -11,8 +11,9 @@ h2 {
 }
 
 .index_container {
+  background-color: #434242;
   border-style: solid;
-  border-color: gold;
+  border-color: #434242;
   border-width: 5px;
   color: white;
   display: grid;
@@ -56,7 +57,7 @@ h2 {
   transition: transform 0.3s;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(0.95);
   }
 }
 
@@ -72,7 +73,7 @@ h2 {
   transition: transform 0.3s;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(0.95);
   }
 }
 
@@ -88,7 +89,7 @@ h2 {
   transition: transform 0.3s;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(0.95);
   }
 }
 .index_row {

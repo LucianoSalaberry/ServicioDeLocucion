@@ -43,6 +43,23 @@
   transition: 0.2s;
 }
 
+.footer {
+  background-color: #434242;
+  font-family: "Poppins";
+  font-weight: bolder;
+  width: 100%;
+}
+.footer .footer_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer_row a {
+  text-decoration: none;
+  color: white;
+}
+
 h1 {
   font-family: "Poppins";
   font-size: 60px;
@@ -57,8 +74,9 @@ h2 {
 }
 
 .index_container {
+  background-color: #434242;
   border-style: solid;
-  border-color: gold;
+  border-color: #434242;
   border-width: 5px;
   color: white;
   display: grid;
@@ -100,7 +118,7 @@ h2 {
   transition: transform 0.3s;
 }
 .index_quienSoy:hover {
-  transform: scale(1.1);
+  transform: scale(0.95);
 }
 
 .index_trabajos {
@@ -115,7 +133,7 @@ h2 {
   transition: transform 0.3s;
 }
 .index_trabajos:hover {
-  transform: scale(1.1);
+  transform: scale(0.95);
 }
 
 .index_contacto {
@@ -130,7 +148,7 @@ h2 {
   transition: transform 0.3s;
 }
 .index_contacto:hover {
-  transform: scale(1.1);
+  transform: scale(0.95);
 }
 
 .index_row {
@@ -156,10 +174,10 @@ h2 {
   max-width: 1366px;
   margin: 0 auto;
   grid-template-columns: 1.5fr 2fr;
-  grid-template-rows: 60% 40%;
+  grid-template-rows: 58% 40% 5%;
   column-gap: 0rem;
   row-gap: 0rem;
-  grid-template-areas: "form              foto_locutora" "foto_notebook     instagram";
+  grid-template-areas: "form              foto_locutora" "foto_notebook     instagram" "footer             footer";
 }
 
 .form {
@@ -178,6 +196,11 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.footer {
+  grid-area: footer;
+  margin-top: 5px;
 }
 
 .instagram {
@@ -216,6 +239,7 @@ h2 {
 }
 
 .main_trabajos {
+  background-color: #f3efe0;
   display: grid;
   width: 100%;
   max-width: 1366px;
@@ -241,27 +265,57 @@ h2 {
   background-size: cover;
   background-position: 50% 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   color: white;
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
+  transition: transform 0.5s ease;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 20px;
+}
+.trabajo1:hover,
+.trabajo2:hover,
+.trabajo3:hover,
+.trabajo4:hover,
+.trabajo5:hover,
+.trabajo6:hover {
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+.trabajo1:hover .desc_trabajo,
+.trabajo2:hover .desc_trabajo,
+.trabajo3:hover .desc_trabajo,
+.trabajo4:hover .desc_trabajo,
+.trabajo5:hover .desc_trabajo,
+.trabajo6:hover .desc_trabajo {
+  transform: scale(1.5);
+}
+.trabajo1 .desc_trabajo,
+.trabajo2 .desc_trabajo,
+.trabajo3 .desc_trabajo,
+.trabajo4 .desc_trabajo,
+.trabajo5 .desc_trabajo,
+.trabajo6 .desc_trabajo {
+  transition: transform 0.5s ease;
 }
 
 .trabajo1 {
   grid-area: trabajo1;
-  background-image: url("../images/index_trabajos.jpg");
+  background-image: url("../images/foto locutora.jpg");
 }
 
 .trabajo2 {
   grid-area: trabajo2;
-  background-image: url("../images/index_trabajos.jpg");
+  background-image: url("../images/index_quiensoy2.jpg");
 }
 
 .trabajo3 {
   grid-area: trabajo3;
-  background-image: url("../images/index_trabajos.jpg");
+  background-image: url("../images/foto notebook.jpg");
 }
 
 .trabajo4 {
@@ -271,12 +325,12 @@ h2 {
 
 .trabajo5 {
   grid-area: trabajo5;
-  background-image: url("../images/index_trabajos.jpg");
+  background-image: url("../images/foto notebook.jpg");
 }
 
 .trabajo6 {
   grid-area: trabajo6;
-  background-image: url("../images/index_trabajos.jpg");
+  background-image: url("../images/foto studio negro.jpg");
 }
 
 .footer {
