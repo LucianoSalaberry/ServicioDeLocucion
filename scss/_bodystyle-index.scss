@@ -2,12 +2,18 @@ h1 {
   font-family: $font-family;
   font-size: $h1-size;
   letter-spacing: $h1-letter-spacing;
+  text-align: center;
+
+  @include mobile {
+    font-size: calc($h1-size / 1.7);
+  }
 }
 h2 {
   font-family: $font-family;
   font-size: $h2-size;
   letter-spacing: $h2-letter-spacing;
   word-wrap: break-word;
+  text-align: center;
 }
 
 .index_container {
@@ -28,81 +34,100 @@ h2 {
   grid-template-areas:
     "logo      logo      logo"
     "quienSoy  trabajos  contacto";
-}
+  .index_logo {
+    grid-area: logo;
+    background-image: url("../images/index_logo.jpg");
+    background-position-y: center;
+    background-position-x: right;
+    background-size: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: white;
 
-.index_logo {
-  grid-area: logo;
+    .index_row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-  background-image: url("../images/index_logo.jpg");
-  background-position-y: center;
-  background-position-x: right;
-  background-size: 120vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-}
-.index_quienSoy {
-  grid-area: quienSoy;
-  background-image: url("../images/index_quiensoy2.jpg");
-  background-size: cover;
-  background-position: 50% 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: scale(0.95);
+      .index_icons {
+        flex-direction: row;
+        .icons_mic,
+        .icons_head,
+        .icons_radio {
+          max-width: 50px;
+          padding: 10px;
+        }
+      }
+    }
   }
-}
 
-.index_trabajos {
-  grid-area: trabajos;
-  background-image: url("../images/index_trabajos.jpg");
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.3s;
+  .index_quienSoy {
+    grid-area: quienSoy;
+    background-image: url("../images/index_quiensoy2.jpg");
+    background-size: cover;
+    background-position: 50% 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
 
-  &:hover {
-    transform: scale(0.95);
+    &:hover {
+      transform: scale(0.95);
+    }
   }
-}
 
-.index_contacto {
-  grid-area: contacto;
-  background-image: url("../images/index_contacto.jpg");
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.3s;
+  .index_trabajos {
+    grid-area: trabajos;
+    background-image: url("../images/index_trabajos.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
 
-  &:hover {
-    transform: scale(0.95);
+    &:hover {
+      transform: scale(0.95);
+    }
   }
-}
-.index_row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.index_icons {
-  flex-direction: row;
-  .icons_mic,
-  .icons_head,
-  .icons_radio {
-    max-width: 50px;
-    padding: 10px;
+  .index_contacto {
+    grid-area: contacto;
+    background-image: url("../images/index_contacto.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+
+  @include tablet {
+    max-width: 768px;
+    border-color: red;
+    grid-template-columns: repeat (1, 1fr);
+    grid-template-rows: 40% 20% 20% 20%;
+    column-gap: 0rem;
+    /*row-gap: 20px;*/
+    grid-template-areas:
+      "logo"
+      "quienSoy"
+      "trabajos"
+      "contacto";
+  }
+
+  @include mobile {
+    max-width: 576px;
+    border-color: aqua;
   }
 }

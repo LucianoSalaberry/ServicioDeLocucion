@@ -9,74 +9,94 @@
   min-height: 100vh;
   grid-gap: 0;
   grid-template-areas:
-    "header      header    header"
+    "header_trabajos      header_trabajos    header_trabajos"
     "trabajo1      trabajo2    trabajo3"
     "trabajo4      trabajo5    trabajo6"
     "footer        footer       footer";
-}
 
-.header {
-  grid-area: header;
-  margin-bottom: 5px;
-}
-.trabajo1,
-.trabajo2,
-.trabajo3,
-.trabajo4,
-.trabajo5,
-.trabajo6 {
-  background-size: cover;
-  background-position: 50% 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  margin: 5px;
-  transition: transform 0.5s ease;
-  text-align: center;
-  font-family: $h5-font-family;
-  font-size: $h5-font-size;
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: max-content auto auto auto auto auto auto max-content;
+    min-height: 100vh;
+    grid-gap: 0;
+    grid-template-areas:
+      "header_trabajos"
+      "trabajo1"
+      "trabajo2"
+      "trabajo3"
+      "trabajo4"
+      "trabajo5"
+      "trabajo6"
+      "footer";
+  }
 
-  &:hover {
-    transform: scale(0.95);
-    opacity: 0.7;
+  .header_trabajos {
+    grid-area: header_trabajos;
+    margin-bottom: 5px;
+  }
+  .trabajo1,
+  .trabajo2,
+  .trabajo3,
+  .trabajo4,
+  .trabajo5,
+  .trabajo6 {
+    background-size: cover;
+    background-position: 50% 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    transition: transform 0.5s ease;
+    text-align: center;
+    font-family: $h5-font-family;
+    font-size: $h5-font-size;
+
+    @include mobile {
+      margin: 2px;
+    }
+
+    &:hover {
+      transform: scale(0.95);
+      opacity: 0.7;
+      .desc_trabajo {
+        transform: scale(1.5);
+      }
+    }
+
     .desc_trabajo {
-      transform: scale(1.5);
+      transition: transform 0.5s ease;
     }
   }
-
-  .desc_trabajo {
-    transition: transform 0.5s ease;
+  .trabajo1 {
+    grid-area: trabajo1;
+    background-image: url("../images/foto\ locutora.jpg");
   }
-}
-.trabajo1 {
-  grid-area: trabajo1;
-  background-image: url("../images/foto\ locutora.jpg");
-}
-.trabajo2 {
-  grid-area: trabajo2;
-  background-image: url("../images/index_quiensoy2.jpg");
-}
-.trabajo3 {
-  grid-area: trabajo3;
-  background-image: url("../images/foto\ notebook.jpg");
-}
-.trabajo4 {
-  grid-area: trabajo4;
-  background-image: url("../images/index_trabajos.jpg");
-}
-.trabajo5 {
-  grid-area: trabajo5;
-  background-image: url("../images/foto\ notebook.jpg");
-}
-.trabajo6 {
-  grid-area: trabajo6;
-  background-image: url("../images/foto\ studio\ negro.jpg");
-}
-.footer {
-  grid-area: footer;
-  margin-top: 5px;
+  .trabajo2 {
+    grid-area: trabajo2;
+    background-image: url("../images/index_quiensoy2.jpg");
+  }
+  .trabajo3 {
+    grid-area: trabajo3;
+    background-image: url("../images/foto\ notebook.jpg");
+  }
+  .trabajo4 {
+    grid-area: trabajo4;
+    background-image: url("../images/index_trabajos.jpg");
+  }
+  .trabajo5 {
+    grid-area: trabajo5;
+    background-image: url("../images/foto\ notebook.jpg");
+  }
+  .trabajo6 {
+    grid-area: trabajo6;
+    background-image: url("../images/foto\ studio\ negro.jpg");
+  }
+  .footer {
+    grid-area: footer;
+    margin-top: 5px;
+  }
 }
