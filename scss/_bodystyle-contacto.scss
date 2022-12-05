@@ -12,9 +12,28 @@
     "form              foto_locutora"
     "foto_notebook     iconos"
     "footer             footer";
-
+  /*
+@include tablet {
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 58% 40% 5%;
+  column-gap: 0rem;
+  row-gap: 0rem;
+  grid-template-areas:
+    "form              foto_locutora"
+    "foto_notebook     iconos"
+    "footer             footer";
+}
+*/
   .form {
     grid-area: form;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon_mail {
+      width: 180px;
+      height: auto;
+    }
   }
   .foto_locutora {
     grid-area: foto_locutora;
@@ -37,6 +56,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 60px;
+    margin-inline: 60px;
 
     .icon_whatsapp {
       width: 180px;
@@ -46,23 +67,22 @@
       width: 160px;
       height: auto;
     }
-    /*.icon_insta {
-      display: block;
-      position: relative;*/
-
-    .icon_instabrad {
+    .icon_insta {
       position: relative;
-      width: 170px;
-      height: auto;
-    }
+      .icon_instabrad {
+        width: 170px;
+        height: auto;
+      }
 
-    .icons_mic_contact {
-      width: 60px;
-      height: auto;
-      background-color: transparent;
-      position: absolute;
-      bottom: 49px;
-      left: 47px;
+      .icons_mic_contact {
+        width: 60px;
+        height: auto;
+        background-color: transparent;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
