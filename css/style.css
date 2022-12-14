@@ -431,6 +431,8 @@ h2 {
   font-family: "Poppins";
   padding-top: 10px;
   color: white;
+  text-align: left;
+  width: 60%;
 }
 
 .iberia {

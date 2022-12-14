@@ -1,6 +1,5 @@
 .main_quienSoy {
   background-size: cover;
-
   background-image: linear-gradient(
       90deg,
       rgba(0, 0, 0, 1) 0%,
@@ -31,6 +30,8 @@
       font-family: $font-family;
       padding-top: 10px;
       color: white;
+      text-align: left;
+      width: 60%;
     }
   }
 }
