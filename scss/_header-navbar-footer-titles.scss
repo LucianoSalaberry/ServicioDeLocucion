@@ -1,7 +1,26 @@
+h1 {
+  font-family: $font-family;
+  font-size: $h1-size;
+
+  letter-spacing: $h1-letter-spacing;
+  text-align: center;
+
+  @include mobile {
+    font-size: calc($h1-size / 1.7);
+  }
+}
+h2 {
+  font-family: $font-family;
+  font-size: $h2-size;
+
+  letter-spacing: $h2-letter-spacing;
+  word-wrap: break-word;
+  text-align: center;
+}
+
 .header,
 .header_trabajos {
   font-family: $font-family;
-  font-weight: bolder;
   width: 100%;
   top: 0;
   z-index: 100;
@@ -62,7 +81,6 @@
 .footer {
   background-color: #434242;
   font-family: $font-family;
-  font-weight: bolder;
   width: 100%;
 
   .footer_row {
